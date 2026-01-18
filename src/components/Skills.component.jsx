@@ -51,20 +51,36 @@ function Skills() {
                                     <h5>CSS</h5>
                                 </div>
                                 <div className='item'>
-                                    <img src={percent80} alt="Image" />
-                                    <h5>Javascript</h5>
+                                    <img src={percent90} alt="Image" />
+                                    <h5>JavaScript</h5>
                                 </div>
                                 <div className='item'>
-                                    <img src={percent80} alt="Image" />
+                                    <img src={percent90} alt="Image" />
                                     <h5>React JS</h5>
                                 </div>
                                 <div className='item'>
-                                    <img src={percent60} alt="Image" />
-                                    <h5>Typescript</h5>
+                                    <img src={percent80} alt="Image" />
+                                    <h5>Redux</h5>
                                 </div>
                                 <div className='item'>
-                                    <img src={percent70} alt="Image" />
+                                    <img src={percent80} alt="Image" />
+                                    <h5>Angular JS</h5>
+                                </div>
+                                <div className='item'>
+                                    <img src={percent80} alt="Image" />
+                                    <h5>Next.js</h5>
+                                </div>
+                                <div className='item'>
+                                    <img src={percent80} alt="Image" />
+                                    <h5>TypeScript</h5>
+                                </div>
+                                <div className='item'>
+                                    <img src={percent90} alt="Image" />
                                     <h5>Git</h5>
+                                </div>
+                                <div className='item'>
+                                    <img src={percent80} alt="Image" />
+                                    <h5>Vibe Coding</h5>
                                 </div>
                             </Carousel>
                         </div>

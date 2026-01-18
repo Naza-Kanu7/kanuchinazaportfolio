@@ -23,24 +23,41 @@ function Contact() {
         })
     }
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        setButtonText('Sending...');
-        let response = await fetch("http://localhost:5000/contact", {
-            method: "POST",
-            headers: {
-                "Content-Type": "Application/json;charset=utf-8",
-            },
-            body: JSON.stringify(formDetails),       
-        })
-        setButtonText("Send")
-        let result = response.json();
-        setFormDetails(formInitialDetails)
-        if(result.code === 200) {
-            setStatus({success: true, message: 'Message sent successfully!'});
-        } else {
-            setStatus({success: true, message: 'Message sent successfully!!'})
-        }
+        setButtonText('Opening WhatsApp...');
+        
+        // Format the message with all form details
+        const whatsappMessage = `Hello! I'm interested in working with you.
+
+*Name:* ${formDetails.firstName} ${formDetails.lastName}
+*Email:* ${formDetails.email}
+*Phone:* ${formDetails.phone}
+
+*Message:*
+${formDetails.message}`;
+
+        // WhatsApp phone number (from footer - 2347046013444)
+        const phoneNumber = '2347046013444';
+        
+        // Encode the message for URL
+        const encodedMessage = encodeURIComponent(whatsappMessage);
+        
+        // Create WhatsApp URL
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+        
+        // Open WhatsApp in a new tab
+        window.open(whatsappUrl, '_blank');
+        
+        // Reset form and button
+        setButtonText("Send");
+        setFormDetails(formInitialDetails);
+        setStatus({success: true, message: 'Opening WhatsApp...'});
+        
+        // Clear status message after 3 seconds
+        setTimeout(() => {
+            setStatus({});
+        }, 3000);
     };
 
     return (

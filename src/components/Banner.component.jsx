@@ -8,7 +8,7 @@ import headerImg from '../assets/img/header-img.svg';
 function Banner() {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false)
-    const toRotate = ["Naza" ,"a Web Developer", "a Frontend Web Developer"]
+    const toRotate = ["Kanu Chinaza" ,"a Frontend Engineer", "a React Developer", "a Web Developer"]
     const [text, setText] =useState('')
     const [delta, setDelta] = useState(300 - Math.random() * 100)
     const period = 2000
@@ -47,9 +47,9 @@ function Banner() {
             <Container>
                 <Row className='align-items-center'>
                     <Col xs={12} md={6} xl={7}>
-                        <span className='tagline'>Welcome to my Portfolio</span>
+                        <span className='tagline'>Frontend Engineer & Web Developer</span>
                         <h1>{`Hi I'm`} <span className='wrap'> {text}</span></h1>
-                        <p>Hey there, my name is Kanu Chinaza. Graduate of the University of Nigeria, Nsukka. I am 21 years old. I am a Frontend Web Developer. I am interested in joint projects, jobs relating to my expertise. Please recommend me! Thank You!</p>
+                        <p>I'm a passionate Frontend Engineer with expertise in building responsive, user-centric web applications using modern technologies. Currently working at Tyms Technologies, I specialize in React, Angular, Next.js, and TypeScript. I'm available for freelance projects and always eager to bring your vision to life with clean, efficient code.</p>
                         <button onClick={() => console.log('connect')}>
                             Let's Connect 
                             <a href='#connect'><ArrowRightCircle size={25} /></a> 
